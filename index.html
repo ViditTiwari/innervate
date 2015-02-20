@@ -11,6 +11,7 @@
     
 <title> Innervate - Coming Soon</title>
 <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=PT+Sans+Narrow:700" rel="stylesheet" />
 
 
 <style>
@@ -41,9 +42,17 @@ div{text-align: center;}
 
 body
 {
-	background-image: url("geometry2.png");
+	
+	width:100%;
+	margin: 0px;
+	padding: 0px;
+	position:relative;
+	z-index:0;
+	background-image: url("images/geometry2.png");
 
 }
+
+
 
 h3, .h3
 {   margin-top: 0px;
@@ -142,8 +151,40 @@ p{  margin-top: 2px;
 
 }
 
+.footer2{
+	border-top: 2px solid #5e5b64;
+	 
+	padding-top: 10px;
+	font:bold 30px 'PT Sans Narrow', sans-serif;
+	height: 60px;
+	color:#5e5b64;
+	
 
-.footer{
+
+	background-color:#d1d1d1;
+
+
+}
+
+
+.logo1{
+  
+  margin-bottom: 10px;
+  margin-left: 20px;
+  vertical-align: middle;
+  height:50px;
+  width:132px;
+}
+p.inline {
+    display: inline;
+}
+
+/* Set a width to the outermost UL and center it */
+
+
+
+
+.footer1{
 	
 	width:100%;
 	
@@ -153,6 +194,8 @@ p{  margin-top: 2px;
   font-family: 'Ubuntu', serif;
   font-size: 12px;
   text-align: center;
+  background-color:#d1d1d1;
+
 }
 
 .chart {
@@ -187,7 +230,7 @@ input {
 
 
 
-img {
+.hat {
     position: absolute; 
     top:-70px; 
     right:90px;
@@ -219,11 +262,11 @@ img {
 	p{  margin-top: 8px;
 	margin-bottom: 8px;
 	}
-	.footer{
+	.footer1{
 	font-size:9px;
 	}
 
-	img {
+	.hat {
     position: absolute; 
     top:-50px; 
     right:100px;
@@ -238,6 +281,24 @@ img {
     margin-bottom:20px;
 }
 
+.footer2{
+
+	font:bold 20px 'PT Sans Narrow', sans-serif;
+	height: 30px;
+}
+
+.logo1{
+
+  
+  margin-bottom: 5px;
+  margin-left: 10px;
+  vertical-align: middle;
+   height:30px;
+  width:80px;
+
+}
+
+}
 
 
 
@@ -284,7 +345,7 @@ img {
 
 
 
-<center><div class="chart" id="graph" data-percent="10"><img src="images/txt-launch-day-hat.png" ></div></center>
+<center><div class="chart" id="graph" data-percent="10"><img class = "hat"src="images/txt-launch-day-hat.png" ></div></center>
 
 
 
@@ -299,14 +360,19 @@ img {
 	
 </h4>
 
+<div class="footer2">FACTORY VISIT PARTNER
+
+					<img class = "logo1" src="images/yakult.png" alt="yakult-logo"/></div>
 
 
-<div class="footer gray">
+<div class="footer1 gray">
 	
 	<p>Innervate © 2014. All Rights Reserved.</p>
 
 </div>
 </div>
+
+
 
 <script type="text/javascript">
 var el = document.getElementById('graph'); // get canvas
@@ -352,6 +418,28 @@ drawCircle('#efefef', options.lineWidth, 100 / 100);
 drawCircle('#40EB3D', options.lineWidth, options.percent / 100);
 
 </script>
+
+
+
+			
+			
+			
+
+				
+
+					
+
+				
+
+			
+
+				
+				
+				
+						
+			
+			
+
 
 </body>
 
