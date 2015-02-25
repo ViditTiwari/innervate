@@ -156,7 +156,7 @@ p{  margin-top: 2px;
 	 
 	padding-top: 10px;
 	font:bold 20px 'PT Sans Narrow', sans-serif;
-	height: 75px;
+	height: 70px;
 	color:#5e5b64;
 	
 
@@ -167,6 +167,7 @@ p{  margin-top: 2px;
 }
 
 
+
 .logo1{
   
   margin-bottom: 10px;
@@ -174,7 +175,38 @@ p{  margin-top: 2px;
   vertical-align: middle;
   height:50px;
   width:132px;
+
+  	-webkit-filter: grayscale(0);
+			-moz-filter: grayscale(0);
+			-ms-filter: grayscale(0);
+			filter: grayscale(0);
+
+			-webkit-transition-property: -webkit-filter;
+			-webkit-transition-duration: 2s;
+
+			-moz-transition-property: -moz-filter;
+			-moz-transition-duration: 2s;
+
+			-ms-transition-property: -ms-filter;
+			-ms-transition-duration: 2s;
+
+			transition-property: all;
+			transition-duration: 2s;
+
+
 }
+
+	.bw {
+			-webkit-filter: grayscale(1) !important;
+			-moz-filter: grayscale(1) !important;
+			-ms-filter: grayscale(1) !important;
+			filter: grayscale(1) !important;
+
+		}
+
+
+
+
 p.inline {
     display: inline;
 }
@@ -362,7 +394,8 @@ input {
 
 <div class="footer2"><div>FACTORY VISIT PARTNER</div>
 
-					<img class = "logo1" src="images/yakult.png" alt="yakult-logo"/></div>
+					<img id="animateImage" class = "logo1" src="images/yakult.png" alt="yakult-logo"/>
+				</div>
 
 
 <div class="footer1 gray">
@@ -416,6 +449,19 @@ var drawCircle = function(color, lineWidth, percent) {
 
 drawCircle('#efefef', options.lineWidth, 100 / 100);
 drawCircle('#40EB3D', options.lineWidth, options.percent / 100);
+
+
+		setInterval(function() {
+			var image = document.getElementById("animateImage");
+			var klass = "logo1";
+
+			if(image.className == klass) {
+				image.className = "bw " + klass; 
+			}
+			else {
+				image.className = klass;
+			}
+		}, 3000);
 
 </script>
 
